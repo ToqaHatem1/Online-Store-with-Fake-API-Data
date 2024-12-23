@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> My Store</h1>
+    <div class="container">
+        <div class="filter-container">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <select id="categoryDropdown">
+                <option value="all">All Categories</option>
+            </select>
+            <select id="sortDropdown">
+                <option value="default">Sort by</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="product-desc">Avg. Customer Review</option>
+            </select>
+            <div class="price-filter">
+                <input type="number" id="minPrice" placeholder="Min Price" min="0">
+                <input type="number" id="maxPrice" placeholder="Max Price" min="0">
+            </div>
+            <button id="applyFilter">Apply Filter</button>
+            <button id="resetFilters">Reset Filters</button>
+            
+        </div>
+        <div class="shopping-cart">
+            <h3>Shopping Cart</h3>
+            <div id = "cartItems"></div> 
+            <p> Total Quantity: <span id = "totalQuantity">0</span></p>
+            <p>Total Price: $<span id = "totalPrice">0.00</span></p>
+        </div>
+        
+        
+       <div class="products">
+        
+       </div>
+       
+    </div>
+    
+    <div id="pagination" class="pagination-controls"></div>
+
+    <!-- Modal for Product Details -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <!-- Modal for Image -->
+    <div id="imageModal" class="modal">
+        <span class="close-image">&times;</span>
+        <img id="imageModalContent" alt="Product Image" style="max-width: 100%; height: auto; display: block; margin: auto;">
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="store.js"></script>
+    
+</body>
+</html>
